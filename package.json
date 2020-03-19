@@ -1,0 +1,44 @@
+{
+  "name": "svelte-express-app",
+  "description": "My app bundled with Express",
+  "version": "1.0.0",
+  "version_short": "1.0",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "nodemon -r dotenv/config src/app.mjs",
+    "serve": "npm-run-all build start",
+    "stop": "lsof -ti :3000 | xargs kill"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "7.1.1",
+    "@rollup/plugin-replace": "2.3.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "2.1.0",
+    "rollup-plugin-css-only": "2.0.0",
+    "rollup-plugin-livereload": "1.0.4",
+    "rollup-plugin-node-builtins": "2.1.2",
+    "rollup-plugin-svelte": "5.1.1",
+    "rollup-plugin-svelte-ssr": "1.0.0",
+    "rollup-plugin-terser": "5.3.0",
+    "svelte": "3.20.1"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "dotenv-expand": "5.1.0",
+    "errorhandler": "1.5.1",
+    "express": "4.17.1",
+    "method-override": "3.0.0",
+    "nodemon": "2.0.2",
+    "recto": "4.4.1",
+    "svelte-routing": "1.4.2",
+    "sveltestrap": "3.3.3"
+  }
+}
